@@ -10,10 +10,13 @@
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
   "forwardPorts": [3000],
   "portsAttributes": {
-    "8000": {
-      "label": "Express"
+    "3000": {
+      "label": "Service"
     }
   },
+
+  "postStartCommand": "npm i",
+  "postAttachCommand": "npm run dev",
 
   // Configure tool-specific properties.
   "customizations": {
